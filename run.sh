@@ -1,1 +1,1 @@
-clear && wasm-pack build ../whiteboard-rs/ --release && npm install && npm run start
+clear && wasm-pack build ../whiteboard-rs/ && npm install && npm run start

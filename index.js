@@ -1,6 +1,6 @@
 import * as wasm from "whiteboard-rs";
 
-const whiteboard = wasm.Whiteboard.new();
+const whiteboard = wasm.Whiteboard.new('owner_123');
 
 (function () {
     let canvas = document.querySelector('#canvas');
