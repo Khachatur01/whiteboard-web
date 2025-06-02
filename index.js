@@ -29,6 +29,11 @@ const whiteboard = wasm.Whiteboard.new('owner_123');
         whiteboard.mouse_up(event.offsetX, event.offsetY);
     });
 
+    document.body.addEventListener('keydown', (keyboardEvent) => {
+        whiteboard.key_down(keyboardEvent.key);
+        console.log(keyboardEvent.key)
+    });
+
     document.getElementById('rectangle').addEventListener('click', (event) => {
         whiteboard.activate_rectangle_tool();
     });
