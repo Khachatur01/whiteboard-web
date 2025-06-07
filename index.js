@@ -4,10 +4,10 @@ const whiteboard = wasm.Whiteboard.new('owner_123');
 
 (function () {
     let canvas = document.querySelector('#canvas');
-    const canvasRenderer = wasm.CanvasRenderer2D.new(canvas);
+    const canvasRenderer = wasm.CanvasRenderer.new(canvas);
 
     let svg = document.querySelector('#svg');
-    const svgRenderer = wasm.SVGRenderer2D.new(svg);
+    const svgRenderer = wasm.SVGRenderer.new(svg);
 
     canvas.addEventListener('mousedown', (event) => {
         whiteboard.mouse_down(event.offsetX, event.offsetY);
@@ -40,6 +40,10 @@ const whiteboard = wasm.Whiteboard.new('owner_123');
 
     document.getElementById('polygon').addEventListener('click', (event) => {
         whiteboard.activate_polygon_tool();
+    });
+
+    document.getElementById('free_hand').addEventListener('click', (event) => {
+        whiteboard.activate_free_hand_tool();
     });
 
     document.getElementById('select').addEventListener('click', (event) => {
