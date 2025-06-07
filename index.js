@@ -4,10 +4,10 @@ const whiteboard = wasm.Whiteboard.new('owner_123');
 
 (function () {
     let canvas = document.querySelector('#canvas');
-    const canvasRenderer = wasm.CanvasRenderer.new(canvas);
+    const canvasRenderer = wasm.CanvasRenderer2D.new(canvas);
 
     let svg = document.querySelector('#svg');
-    const svgRenderer = wasm.SVGRenderer.new(svg);
+    const svgRenderer = wasm.SVGRenderer2D.new(svg);
 
     canvas.addEventListener('mousedown', (event) => {
         whiteboard.mouse_down(event.offsetX, event.offsetY);
